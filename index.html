@@ -711,7 +711,7 @@ const bVeg={
   weekly:[
     {type:'Bachelor · Veg',name:'Breakfast',desc:'Morning tiffin, fresh daily',days:'6 days/week',price:'₹299',unit:'/week'},
     {type:'Bachelor · Veg',name:'Dinner',desc:'Evening tiffin, home-style',days:'6 days/week',price:'₹299',unit:'/week'},
-    {type:'Bachelor · Veg',name:'Combo',desc:'Breakfast + Dinner tiffin',days:'6 days/week',price:'₹579',unit:'/week',badge:'Best Value'},
+    {type:'Bachelor · Veg',name:'Combo',desc:'Breakfast + Dinner tiffin',days:'6 days/week',price:'₹599',unit:'/week',badge:'Best Value'},
   ],
   monthly:[
     {type:'Bachelor · Veg',name:'Breakfast',desc:'Morning tiffin all month',days:'26 days/month',price:'₹1,299',unit:'/month'},
@@ -749,13 +749,43 @@ renderBachelor();
 
 // ── GYM PLANS ──
 const gymPlansData={
+ const gymPlansData={
   weekly:[
-    {type:'Gym · Veg & Non-Veg',name:'Breakfast',desc:'High-protein morning tiffin',days:'6 days/week',price:'₹399',unit:'/week'},
-    {type:'Gym · Veg & Non-Veg',name:'Combo',desc:'Breakfast + Dinner, gym-optimised',days:'6 days/week',price:'₹799',unit:'/week',badge:'Recommended',badgeStyle:'background:rgba(34,168,106,.85)'},
+    {
+      type:'Gym · Veg & Non-Veg',
+      name:'Breakfast',
+      desc:'High-protein morning tiffin',
+      days:'6 days/week',
+      price:'₹599',
+      unit:'/week'
+    },
+    {
+      type:'Gym · Veg & Non-Veg',
+      name:'Dinner',
+      desc:'High-protein evening tiffin',
+      days:'6 days/week',
+      price:'₹599',
+      unit:'/week'
+    }
   ],
+
   monthly:[
-    {type:'Gym · Veg & Non-Veg',name:'Breakfast',desc:'Full month of fitness breakfasts',days:'26 days/month',price:'₹1,699',unit:'/month'},
-    {type:'Gym · Veg & Non-Veg',name:'Combo',desc:'Complete fitness tiffin plan',days:'26 days/month',price:'₹3,199',unit:'/month',badge:'Best Value',badgeStyle:'background:rgba(34,168,106,.85)'},
+    {
+      type:'Gym · Veg & Non-Veg',
+      name:'Breakfast',
+      desc:'Full month of fitness breakfasts',
+      days:'26 days/month',
+      price:'₹2,499',
+      unit:'/month'
+    },
+    {
+      type:'Gym · Veg & Non-Veg',
+      name:'Dinner',
+      desc:'Full month of fitness dinners',
+      days:'26 days/month',
+      price:'₹2,499',
+      unit:'/month'
+    }
   ]
 };
 function renderGym(){

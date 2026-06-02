@@ -748,55 +748,62 @@ function renderBachelor(){
 renderBachelor();
 
 // ── GYM PLANS ──
-const gymPlansData={
- const gymPlansData={
-  weekly:[
+const gymPlansData = {
+  weekly: [
     {
-      type:'Gym · Veg & Non-Veg',
-      name:'Breakfast',
-      desc:'High-protein morning tiffin',
-      days:'6 days/week',
-      price:'₹599',
-      unit:'/week'
+      type: 'Gym · Veg & Non-Veg',
+      name: 'Breakfast',
+      desc: 'High-protein morning tiffin',
+      days: '6 days/week',
+      price: '₹599',
+      unit: '/week'
     },
     {
-      type:'Gym · Veg & Non-Veg',
-      name:'Dinner',
-      desc:'High-protein evening tiffin',
-      days:'6 days/week',
-      price:'₹599',
-      unit:'/week'
+      type: 'Gym · Veg & Non-Veg',
+      name: 'Dinner',
+      desc: 'High-protein evening tiffin',
+      days: '6 days/week',
+      price: '₹599',
+      unit: '/week'
     }
   ],
 
-  monthly:[
+  monthly: [
     {
-      type:'Gym · Veg & Non-Veg',
-      name:'Breakfast',
-      desc:'Full month of fitness breakfasts',
-      days:'26 days/month',
-      price:'₹2,499',
-      unit:'/month'
+      type: 'Gym · Veg & Non-Veg',
+      name: 'Breakfast',
+      desc: 'Full month of fitness breakfasts',
+      days: '26 days/month',
+      price: '₹2,499',
+      unit: '/month'
     },
     {
-      type:'Gym · Veg & Non-Veg',
-      name:'Dinner',
-      desc:'Full month of fitness dinners',
-      days:'26 days/month',
-      price:'₹2,499',
-      unit:'/month'
+      type: 'Gym · Veg & Non-Veg',
+      name: 'Dinner',
+      desc: 'Full month of fitness dinners',
+      days: '26 days/month',
+      price: '₹2,499',
+      unit: '/month'
     }
   ]
 };
-function renderGym(){
-  let html='<div style="background:rgba(34,168,106,.06);border:1px solid rgba(34,168,106,.15);border-radius:10px;padding:.85rem 1.25rem;margin-bottom:2rem;font-size:13px;color:rgba(34,168,106,.8);display:flex;align-items:center;gap:.6rem;"><span>🥗</span><span>Both <strong>Veg &amp; Non-Veg</strong> options are available — mention your preference when subscribing via the form.</span></div>';
-  Object.entries(gymPlansData).forEach(([type,arr])=>{
-    const lbl=type==='weekly'?'Weekly':'Monthly';
-    const note=type==='weekly'?'6 days · Sun holiday':'26 days · Sun holiday';
-    html+=makeSH(lbl,note)+makeGrid(arr,'gym-pc');
+
+function renderGym() {
+  let html =
+    '<div style="background:rgba(34,168,106,.06);border:1px solid rgba(34,168,106,.15);border-radius:10px;padding:.85rem 1.25rem;margin-bottom:2rem;font-size:13px;color:rgba(34,168,106,.8);display:flex;align-items:center;gap:.6rem;"><span>🥗</span><span>Both <strong>Veg & Non-Veg</strong> options are available — mention your preference when subscribing via the form.</span></div>';
+
+  Object.entries(gymPlansData).forEach(([type, arr]) => {
+    const lbl = type === 'weekly' ? 'Weekly' : 'Monthly';
+    const note = type === 'weekly'
+      ? '6 days · Sun holiday'
+      : '26 days · Sun holiday';
+
+    html += makeSH(lbl, note) + makeGrid(arr, 'gym-pc');
   });
-  document.getElementById('gymPlans').innerHTML=html;
+
+  document.getElementById('gymPlans').innerHTML = html;
 }
+
 renderGym();
 
 // ── FRUIT BOX PLANS ──
